@@ -1,6 +1,6 @@
 # Coding in TypeScript
 
-I made this skill from the coding and TypeScript instructions I use in my AI Music Video Studio (AIMVS) project. I pulled together the guidance that applies across projects and published it so anyone can use it in their own TypeScript codebase.
+This skill was made from the coding and TypeScript instructions for AI Music Video Studio (AIMVS). It brings the guidance that applies across projects into a standalone skill published for anyone to use.
 
 Use it when writing, changing, or reviewing TypeScript. The skill follows your project's framework, tools, and conventions.
 
