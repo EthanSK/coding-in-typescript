@@ -1,6 +1,8 @@
 # Coding in TypeScript
 
-An Agent Skill for making focused TypeScript changes and reviewing them against the owning contracts. It consolidates the transferable engineering rules from AI Music Video Studio and works with the target repository's own framework, tools, and conventions.
+I made this skill from the coding and TypeScript instructions I use in my AI Music Video Studio (AIMVS) project. I pulled together the guidance that applies across projects and published it so anyone can use it in their own TypeScript codebase.
+
+Use it when writing, changing, or reviewing TypeScript. The skill follows your project's framework, tools, and conventions.
 
 The skill covers:
 
@@ -12,7 +14,7 @@ The skill covers:
 
 ## Install in Codex
 
-For one project, clone the skill from its repository root:
+To install it in one project, run this from the root of your own repository:
 
 ```sh
 git clone https://github.com/EthanSK/coding-in-typescript.git .agents/skills/coding-in-typescript
