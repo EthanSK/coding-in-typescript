@@ -1,0 +1,4 @@
+interface:
+  display_name: "Coding in TypeScript"
+  short_description: "Write and review strongly typed TypeScript"
+  default_prompt: "Use $coding-in-typescript to make a focused TypeScript change and verify the affected contracts."

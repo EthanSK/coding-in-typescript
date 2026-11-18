@@ -1,0 +1,20 @@
+# Frontend
+
+## State, forms, and controls
+
+- Trace the data flow from the owner to the rendered control and back to the save payload. Preserve loading, empty, absent, disabled, cancelled, stale, pending, and error states. Model them explicitly when they differ. Default only for a legitimate missing case. Keep API, local state, and persisted state in sync through their established owner and invalidation or subscription path.
+- Derive form values, choices, and validation from their owning contracts. A saved draft can contain unfinished required input. Check drafts with a compatible runtime schema and preserve raw editable values. Submission applies completion rules. Keep null or omission, disabled field submission, dirty/touched status, resets, asynchronous validation, external updates, leave behavior, Undo, and live-edit conflict behavior.
+- Reuse shared controls, form warnings, design tokens, and accessibility patterns. Keep feature constraints with the feature. Use the established design system for color, typography, radius, and elevation, and layout utilities for positioning and spacing where appropriate. Avoid two systems setting the same property on one element. Check real alignment and focus with representative labels, icons, loading states, and widths.
+- Keep active-view, lifecycle, and subscription ownership explicit. Rendering optimization does not suspend background work. Check whether changing the owner extends listener lifetime, breaks cleanup, or hides updates from a view. Preserve controlled input, visible value, pending update, emitted value, and saved value together, including resetting to a value the parent already holds.
+- Follow the repository's user-facing wording rules. Surface the concrete condition or action. Keep auth or private-state details out of public status and error copy.
+
+## When the project uses Angular
+
+Confirm the installed compiler and framework APIs before applying these examples. Follow the project's Angular and UI library choices.
+
+- Keep strict template and host-binding checks. For closed-union template switches, use the installed compiler's exhaustiveness mechanism, such as `@default never;` where supported. Add an explicit empty branch for a deliberately blank case. Use a stable local binding where narrowing needs it, and prove a missing branch fails compilation. Preserve the installed optional-chaining semantics and meaningful domain null values.
+- Use the project's preferred forms API and keep the model derived. When adopting Signal Forms, verify real field binding and compatibility of shared controls, validation, hints, and live-edit warnings. Treat signal writes, legacy silent writes, and disabled-field submission as separate behavior to test. Use an interop adapter only for a concrete supported contract.
+- Prefer the project's established change-detection and signal patterns. A signal input does not make plain mutable state reactive. Trace writers in subscriptions, timers, third-party callbacks, and retained views. Choose computed or linked state when it expresses the existing relationship, and remove bridges only once their original reason is gone.
+- Use resource-style APIs for suitable reads with explicit cancellation and stale-value semantics. Keep mutation, payment, long-running operations, and ongoing listeners in their owning mechanisms. Keep observables when their event or cancellation behavior remains needed.
+- Preserve dependency provider lifetime and initialization. Before migrating service decorators, check constructor injection, inherited constructors, factories, overrides, and component/route providers. Adopt lazy injection for a verified bundle benefit with preserved initialization. Keep router guards, history, reuse and cleanup owned by the existing code unless a scoped change requires otherwise.
+- Where Material and Tailwind coexist, prefer Material/theme utilities for system styling and Tailwind for layout, spacing, and responsive behavior. Verify accessible controls including keyboard and pointer behavior. Treat larger forms, routing, injector lifetime, and animations migrations as separately scoped work.
